@@ -6,6 +6,11 @@ import itemData from "../data/items";
 function App() {
   const [items, setItems] = useState(itemData);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  function handleSearchChange(event) {
+    setSearchTerm(event.target.value);
+  }
 
   function handleDarkModeClick() {
     setIsDarkMode((isDarkMode) => !isDarkMode);
